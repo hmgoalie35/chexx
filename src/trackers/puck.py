@@ -1,7 +1,7 @@
 import cv2 as cv
 
-from src.conf import VIDEO_DIR
-from src.readers.base import BaseReader
+from conf import VIDEO_DIR
+from readers.base import BaseReader
 
 
 BLUE = (255, 0, 0)

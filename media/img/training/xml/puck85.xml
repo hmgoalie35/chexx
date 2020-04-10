@@ -1,0 +1,26 @@
+<annotation>
+	<folder>source</folder>
+	<filename>puck85.jpg</filename>
+	<path>/Users/mpittinsky/chexx/media/img/training/source/puck85.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1920</width>
+		<height>1080</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>puck</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>836</xmin>
+			<ymin>562</ymin>
+			<xmax>872</xmax>
+			<ymax>587</ymax>
+		</bndbox>
+	</object>
+</annotation>
