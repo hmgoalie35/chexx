@@ -134,3 +134,5 @@ dmypy.json
 
 media/video/*
 !media/video/.gitkeep
+media/img/training/source/*
+!media/img/training/source/.gitkeep

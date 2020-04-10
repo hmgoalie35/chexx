@@ -3,7 +3,7 @@ from pathlib import Path
 import cv2 as cv
 
 
-class BaseTracker(object):
+class BaseReader(object):
     def __init__(self, file_name):
         if isinstance(file_name, Path):
             file_name = str(file_name.resolve())
@@ -29,7 +29,6 @@ class BaseTracker(object):
         while True:
             ret, frame = self.cap.read()
             if not ret:
-                print('Reached end of stream')
                 break
             self.handle_frame(frame)
             if cv.waitKey(30) == 27:

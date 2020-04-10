@@ -1,7 +1,7 @@
 import cv2 as cv
 
-from conf import VIDEO_DIR
-from trackers.base import BaseTracker
+from src.conf import VIDEO_DIR
+from src.readers.base import BaseReader
 
 
 BLUE = (255, 0, 0)
@@ -9,7 +9,7 @@ GREEN = (0, 255, 0)
 LINE_THICKNESS = 2
 
 
-class PuckTracker(BaseTracker):
+class PuckTracker(BaseReader):
     def handle_frame(self, frame):
         roi = frame[250: 1000, 100: 1600]
         rows, cols, _ = roi.shape

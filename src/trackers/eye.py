@@ -1,7 +1,7 @@
 import cv2
 
-from conf import VIDEO_DIR
-from trackers.base import BaseTracker
+from src.conf import VIDEO_DIR
+from src.readers.base import BaseReader
 
 
 BLUE = (255, 0, 0)
@@ -9,7 +9,7 @@ GREEN = (0, 255, 0)
 LINE_THICKNESS = 2
 
 
-class EyeTracker(BaseTracker):
+class EyeTracker(BaseReader):
     def handle_frame(self, frame):
         roi = frame[200: 600, 950: 1200]
         rows, cols, _ = roi.shape
