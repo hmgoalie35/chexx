@@ -25,8 +25,10 @@ class Video2Img(BaseReader):
             self.written += 1
 
 
-def xml_to_csv(path, out_file):
-    xml_list = []
+def xml_to_csv(path, train_file, test_file):
+    train_list = []
+    test_list = []
+    i = 0
     for xml_file in glob.glob(path + '/*.xml'):
         tree = ET.parse(xml_file)
         root = tree.getroot()
@@ -41,11 +43,19 @@ def xml_to_csv(path, out_file):
                      int(member[4][2].text),
                      int(member[4][3].text)
                      )
-            xml_list.append(value)
+
+            if i % 5 == 0:
+                test_list.append(value)
+            else:
+                train_list.append(value)
+
+        i += 1
+
     column_name = ['filename', 'width', 'height', 'class', 'xmin', 'ymin', 'xmax', 'ymax']
-    xml_df = pd.DataFrame(xml_list, columns=column_name)
-    xml_df.to_csv(out_file, index=None)
+    pd.DataFrame(train_list, columns=column_name).to_csv(train_file, index=None)
+    pd.DataFrame(test_list, columns=column_name).to_csv(test_file, index=None)
 
 
 if __name__ == '__main__':
-    xml_to_csv(str(TRAINING_DIR / 'xml'), str(TRAINING_DIR / 'csv' / 'output.csv'))
+    csv_dir = TRAINING_DIR / 'csv'
+    xml_to_csv(str(TRAINING_DIR / 'xml'), str(csv_dir / 'train.csv'), str(csv_dir / 'test.csv'))
