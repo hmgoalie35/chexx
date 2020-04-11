@@ -1,6 +1,5 @@
 import cv2 as cv
 
-from conf import VIDEO_DIR
 from readers.base import BaseReader
 
 
@@ -38,8 +37,3 @@ class PuckTracker(BaseReader):
         cv.imshow("threshold", threshold)
         # cv.imshow("gray roi", gray_roi)
         cv.imshow("roi", roi)
-
-
-if __name__ == '__main__':
-    t = PuckTracker(file_name=VIDEO_DIR / '20200408_223521.mp4')
-    t.run()

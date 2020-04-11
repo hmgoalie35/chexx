@@ -1,6 +1,5 @@
 import cv2
 
-from conf import VIDEO_DIR
 from readers.base import BaseReader
 
 
@@ -30,8 +29,3 @@ class EyeTracker(BaseReader):
         cv2.imshow("threshold", threshold)
         cv2.imshow("gray roi", gray_roi)
         cv2.imshow("roi", roi)
-
-
-if __name__ == '__main__':
-    t = EyeTracker(file_name=VIDEO_DIR / 'eye.mp4')
-    t.run()
