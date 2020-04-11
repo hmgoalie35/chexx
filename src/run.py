@@ -4,8 +4,8 @@ from trackers.puck import PuckTracker
 
 
 if __name__ == '__main__':
-    t = PuckTracker(file_name=VIDEO_DIR / '20200408_223521.mp4')
-    t.run()
+    pt = PuckTracker(file_name=VIDEO_DIR / '20200408_223521.mp4')
+    pt.run()
 
-    t = EyeTracker(file_name=VIDEO_DIR / 'eye.mp4')
-    t.run()
+    et = EyeTracker(file_name=VIDEO_DIR / 'eye.mp4')
+    # et.run()
