@@ -2,7 +2,10 @@
 CV applied to chexx (bubble hockey)
 
 
-# Development
+# Installation
 * Install python3.7
-* `python3.7 -m venv venv`
-* `source venv/bin/activate && pip install -U pip && pip install -r requirements.txt`
+* Run `sync_project.sh`
+
+# Running
+* Add the code you want to run in `src/run.py`
+* Activate your venv and run `python src/run.py`
