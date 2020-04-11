@@ -7,7 +7,7 @@ import pandas as pd
 from conf import DATA_IMG_DIR
 
 
-def xml_to_csv(input_dir: Path, training_csv, testing_csv):
+def xml_to_csv(input_dir: Path, training_output_file: Path, testing_output_file: Path):
     train_list = []
     test_list = []
     i = 0
@@ -44,5 +44,5 @@ def xml_to_csv(input_dir: Path, training_csv, testing_csv):
         i += 1
 
     columns = ['filename', 'width', 'height', 'class', 'xmin', 'ymin', 'xmax', 'ymax']
-    pd.DataFrame(train_list, columns=columns).to_csv(training_csv, index=None)
-    pd.DataFrame(test_list, columns=columns).to_csv(testing_csv, index=None)
+    pd.DataFrame(train_list, columns=columns).to_csv(str(training_output_file), index=None)
+    pd.DataFrame(test_list, columns=columns).to_csv(str(testing_output_file), index=None)
