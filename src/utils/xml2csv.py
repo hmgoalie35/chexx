@@ -14,16 +14,19 @@ def xml_to_csv(input_dir: Path, training_csv, testing_csv):
     for xml_file in glob.glob(str(input_dir / '*.xml')):
         tree = ET.parse(xml_file)
         root = tree.getroot()
+
+        rel_path = Path(root.find('path').text)
+        abs_path = DATA_IMG_DIR / rel_path
+
+        if not abs_path.exists():
+            print(f'Could not locate img {abs_path} for xml file {xml_file}')
+            continue
+
+        abs_path_str = str(abs_path)
+
         for member in root.findall('object'):
-            rel_path = Path(root.find('path').text)
-            abs_path = DATA_IMG_DIR / rel_path
-
-            if not abs_path.exists():
-                print(f'Could not locate img {abs_path} for xml file {xml_file}')
-                continue
-
             value = (
-                str(abs_path),
+                abs_path_str,
                 int(root.find('size')[0].text),
                 int(root.find('size')[1].text),
                 member[0].text,
