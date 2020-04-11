@@ -2,6 +2,7 @@ from conf import DATA_XML_DIR, VIDEO_DIR
 from trackers.eye import EyeTracker
 from trackers.puck import PuckTracker
 from utils.clean_xml import strip_absolute_path
+from utils.xml2csv import xml_to_csv
 
 
 if __name__ == '__main__':
@@ -14,3 +15,5 @@ if __name__ == '__main__':
     # et.run()
 
     strip_absolute_path(input_dir=DATA_XML_DIR)
+
+    xml_to_csv(input_dir=DATA_XML_DIR, training_csv='train.csv', testing_csv='test.csv')

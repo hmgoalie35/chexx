@@ -4,25 +4,34 @@ from pathlib import Path
 
 import pandas as pd
 
+from conf import DATA_IMG_DIR
 
-def xml_to_csv(path, train_file, test_file):
+
+def xml_to_csv(input_dir: Path, training_csv, testing_csv):
     train_list = []
     test_list = []
     i = 0
-    for xml_file in glob.glob(path + '/*.xml'):
+    for xml_file in glob.glob(str(input_dir / '*.xml')):
         tree = ET.parse(xml_file)
         root = tree.getroot()
         for member in root.findall('object'):
-            fname = Path('media/img/training/source') / root.find('filename').text
-            value = (str(fname),
-                     int(root.find('size')[0].text),
-                     int(root.find('size')[1].text),
-                     member[0].text,
-                     int(member[4][0].text),
-                     int(member[4][1].text),
-                     int(member[4][2].text),
-                     int(member[4][3].text)
-                     )
+            rel_path = Path(root.find('path').text)
+            abs_path = DATA_IMG_DIR / rel_path
+
+            if not abs_path.exists():
+                print(f'Could not locate img {abs_path} for xml file {xml_file}')
+                continue
+
+            value = (
+                str(abs_path),
+                int(root.find('size')[0].text),
+                int(root.find('size')[1].text),
+                member[0].text,
+                int(member[4][0].text),
+                int(member[4][1].text),
+                int(member[4][2].text),
+                int(member[4][3].text)
+            )
 
             if i % 5 == 0:
                 test_list.append(value)
@@ -31,6 +40,6 @@ def xml_to_csv(path, train_file, test_file):
 
         i += 1
 
-    column_name = ['filename', 'width', 'height', 'class', 'xmin', 'ymin', 'xmax', 'ymax']
-    pd.DataFrame(train_list, columns=column_name).to_csv(train_file, index=None)
-    pd.DataFrame(test_list, columns=column_name).to_csv(test_file, index=None)
+    columns = ['filename', 'width', 'height', 'class', 'xmin', 'ymin', 'xmax', 'ymax']
+    pd.DataFrame(train_list, columns=columns).to_csv(training_csv, index=None)
+    pd.DataFrame(test_list, columns=columns).to_csv(testing_csv, index=None)
