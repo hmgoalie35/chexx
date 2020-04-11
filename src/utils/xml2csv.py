@@ -4,8 +4,6 @@ from pathlib import Path
 
 import pandas as pd
 
-from conf import TRAINING_DIR
-
 
 def xml_to_csv(path, train_file, test_file):
     train_list = []
@@ -36,8 +34,3 @@ def xml_to_csv(path, train_file, test_file):
     column_name = ['filename', 'width', 'height', 'class', 'xmin', 'ymin', 'xmax', 'ymax']
     pd.DataFrame(train_list, columns=column_name).to_csv(train_file, index=None)
     pd.DataFrame(test_list, columns=column_name).to_csv(test_file, index=None)
-
-
-if __name__ == '__main__':
-    csv_dir = TRAINING_DIR / 'csv'
-    xml_to_csv(str(TRAINING_DIR / 'xml'), str(csv_dir / 'train.csv'), str(csv_dir / 'test.csv'))
