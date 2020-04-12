@@ -6,10 +6,12 @@ cd $MODELS_DIR/research
 
 export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
 
+cd ../ && rm -rf fine_tuned_model && cd research
+
 python object_detection/export_inference_graph.py \
   --input_type image_tensor \
   --pipeline_config_path ../ssd_mobilenet_v2_coco.config \
-  --trained_checkpoint_prefix ../train/model.ckpt-0 \
+  --trained_checkpoint_prefix ../train/model.ckpt-1600 \
   --output_directory ../fine_tuned_model
 
 cp -r fine_tuned_model/* $DIR/data/model
