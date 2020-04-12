@@ -32,6 +32,7 @@ import logging
 import os
 import random
 import re
+from pathlib import Path
 
 import contextlib2
 from lxml import etree
@@ -69,7 +70,7 @@ def get_class_name_from_filename(file_name):
   Returns:
     A string of the class name.
   """
-  match = re.match(r'([A-Za-z_]+)(_[0-9]+\.jpg)', file_name, re.I)
+  match = re.match(r'([A-Za-z_]+)(_?[0-9]+\.jpg)', file_name, re.I)
   return match.groups()[0]
 
 
@@ -114,18 +115,19 @@ def dict_to_tf_example(data,
     raise ValueError('Image format not JPEG')
   key = hashlib.sha256(encoded_jpg).hexdigest()
 
-  with tf.gfile.GFile(mask_path, 'rb') as fid:
-    encoded_mask_png = fid.read()
-  encoded_png_io = io.BytesIO(encoded_mask_png)
-  mask = PIL.Image.open(encoded_png_io)
-  if mask.format != 'PNG':
-    raise ValueError('Mask format not PNG')
+  if os.path.exists(mask_path):
+    with tf.gfile.GFile(mask_path, 'rb') as fid:
+      encoded_mask_png = fid.read()
+      encoded_png_io = io.BytesIO(encoded_mask_png)
+      mask = PIL.Image.open(encoded_png_io)
+      if mask.format != 'PNG':
+        raise ValueError('Mask format not PNG')
 
-  mask_np = np.asarray(mask)
-  nonbackground_indices_x = np.any(mask_np != 2, axis=0)
-  nonbackground_indices_y = np.any(mask_np != 2, axis=1)
-  nonzero_x_indices = np.where(nonbackground_indices_x)
-  nonzero_y_indices = np.where(nonbackground_indices_y)
+      mask_np = np.asarray(mask)
+      nonbackground_indices_x = np.any(mask_np != 2, axis=0)
+      nonbackground_indices_y = np.any(mask_np != 2, axis=1)
+      nonzero_x_indices = np.where(nonbackground_indices_x)
+      nonzero_y_indices = np.where(nonbackground_indices_y)
 
   width = int(data['size']['width'])
   height = int(data['size']['height'])
@@ -234,13 +236,16 @@ def create_tf_record(output_filename,
       smaller file sizes.
   """
   with contextlib2.ExitStack() as tf_record_close_stack:
+    success = 0
+    total = 0
     output_tfrecords = tf_record_creation_util.open_sharded_output_tfrecords(
         tf_record_close_stack, output_filename, num_shards)
     for idx, example in enumerate(examples):
+      total += 1
       if idx % 100 == 0:
         logging.info('On image %d of %d', idx, len(examples))
       xml_path = os.path.join(annotations_dir, 'xmls', example + '.xml')
-      mask_path = os.path.join(annotations_dir, 'trimaps', example + '.jpg')
+      mask_path = os.path.join(annotations_dir, 'trimaps', example + '.png')
 
       if not os.path.exists(xml_path):
         logging.warning('Could not find %s, ignoring example.', xml_path)
@@ -261,10 +266,10 @@ def create_tf_record(output_filename,
         if tf_example:
           shard_idx = idx % num_shards
           output_tfrecords[shard_idx].write(tf_example.SerializeToString())
-          logging.info('Success: %s', xml_path)
+          success += 1
       except ValueError as e:
         logging.warning('Invalid example: %s %s, ignoring.', xml_path, e)
-
+    print(f'Successful {Path(output_filename).name}: {success}/{total}')
 
 # TODO(derekjchow): Add test for pet/PASCAL main files.
 def main(_):
