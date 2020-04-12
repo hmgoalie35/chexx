@@ -1,11 +1,11 @@
 from conf import VIDEO_DIR
+from trackers.chexx import ChexxTracker
 from trackers.eye import EyeTracker
 from trackers.puck import PuckTracker
-from detect import detect
 
 
 if __name__ == '__main__':
-    chexx_vid = VIDEO_DIR / '20200408_223521.mp4'
+    chexx_vid = VIDEO_DIR / 'chexx_top_and_side_views.mp4'
 
     pt = PuckTracker(input_file=chexx_vid)
     # pt.run()
@@ -13,4 +13,5 @@ if __name__ == '__main__':
     et = EyeTracker(input_file=VIDEO_DIR / 'eye.mp4')
     # et.run()
 
-    detect()
+    t = ChexxTracker(input_file=chexx_vid)
+    t.run()
