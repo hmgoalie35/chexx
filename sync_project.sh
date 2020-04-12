@@ -33,5 +33,3 @@ print_step "Testing tensorflow installation"
 python object_detection/builders/model_builder_test.py
 
 cd $DIR
-
-print_step "Run ./part1.sh"

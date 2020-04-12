@@ -1,11 +1,16 @@
 #!/bin/bash
 
-MODELS_DIR="venv/lib/python3.7/site-packages/tensorflow/models"
-cd $MODELS_DIR
+set -e
 
-cd research && export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim && cd ..
+source utils.sh
+
+update_python_path
+
+cd $MODELS_DIR
 
 python research/object_detection/legacy/train.py \
   --logtostderr \
-  --train_dir=train \
-  --pipeline_config_path=ssd_mobilenet_v2_coco.config
+  --pipeline_config_path=ssd_mobilenet_v2_coco.config \
+  --train_dir=train
+
+cd $DIR
