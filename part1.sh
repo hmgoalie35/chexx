@@ -22,7 +22,7 @@ echo "item {
     name: 'puck'
 }" > annotations/label_map.pbtxt
 
-ls images | sed 's/.jpg//' >annotations/trainval.txt
+ls images | sed 's/.jpg//' > annotations/trainval.txt
 
 cp $DIR/src/utils/create_tf_record.py research/object_detection/dataset_tools/
 

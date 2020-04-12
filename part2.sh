@@ -1,6 +1,8 @@
 #!/bin/bash
 
 DIR=`pwd`
+DATA_DIR=$DIR/data
+DATA_MODEL_DIR=$DATA_DIR/model
 MODELS_DIR="venv/lib/python3.7/site-packages/tensorflow/models"
 cd $MODELS_DIR/research
 
@@ -16,4 +18,9 @@ python object_detection/export_inference_graph.py \
 
 cp -r ../fine_tuned_model/* $DIR/data/model
 
-python src/tf_text_graph_ssd.py --input=data/model/frozen_inference_graph.pb --output=data/model/graph.pbtxt --config=src/ssd_mobilenet_v2_coco.config
+python $DIR/src/tf_text_graph_ssd.py \
+  --input=$DATA_MODEL_DIR/frozen_inference_graph.pb \
+  --output=$DATA_MODEL_DIR/graph.pbtxt \
+  --config=$DIR/src/ssd_mobilenet_v2_coco.config
+
+sed -i s/AddV2/Add/g $DATA_MODEL_DIR/graph.pbtxt
