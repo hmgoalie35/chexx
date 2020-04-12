@@ -4,7 +4,7 @@ DIR=$(pwd)
 MODELS_DIR="venv/lib/python3.7/site-packages/tensorflow/models"
 cd $MODELS_DIR
 
-cd research && PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim && cd ..
+cd research && export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim && cd ..
 
 mkdir -p annotations/xmls
 mkdir -p annotations/trimaps
@@ -16,7 +16,6 @@ mkdir -p eval
 mkdir -p fine_tuned_model
 cp $DIR/data/xml/*.xml annotations/xmls/
 cp $DIR/data/img/*.jpg images/
-cp -r images/* annotations/trimaps
 
 echo "item {
     id: 1
@@ -31,7 +30,6 @@ python research/object_detection/dataset_tools/create_tf_record.py \
   --data_dir=. \
   --output_dir=. \
   --label_map_path=annotations/label_map.pbtxt \
-  --mask_type=jpg \
   --num_shards=1
 
 mv train.record-00000-of-00001 tf_record/train.record
