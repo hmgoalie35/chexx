@@ -1,47 +1,65 @@
 #!/bin/bash
 
-DIR=$(pwd)
-MODELS_DIR="venv/lib/python3.7/site-packages/tensorflow/models"
-cd $MODELS_DIR
+set -e
 
-cd research && export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim && cd ..
+source utils.sh
 
-mkdir -p annotations/xmls
-mkdir -p annotations/trimaps
-mkdir -p images
-mkdir -p checkpoints
-mkdir -p tf_record
-mkdir -p train
-mkdir -p eval
-mkdir -p fine_tuned_model
-cp $DIR/data/xml/*.xml annotations/xmls/
-cp $DIR/data/img/*.jpg images/
+print_step "Creating custom directories"
+mkdir -p $MODELS_DIR/annotations/xmls
+mkdir -p $MODELS_DIR/annotations/trimaps  # TODO Remove?
+mkdir -p $MODELS_DIR/images
+mkdir -p $MODELS_DIR/checkpoints
+mkdir -p $MODELS_DIR/tf_record
+mkdir -p $MODELS_DIR/train
+mkdir -p $MODELS_DIR/eval
+mkdir -p $MODELS_DIR/fine_tuned_model
 
+print_step "Copying xml and jpg images"
+cp $DIR/data/xml/*.xml $MODELS_DIR/annotations/xmls/
+cp $DIR/data/img/*.jpg $MODELS_DIR/images/
+
+
+print_step "Generating label_map.pbtxt"
 echo "item {
     id: 1
     name: 'puck'
-}" > annotations/label_map.pbtxt
+}" > $MODELS_DIR/annotations/label_map.pbtxt
 
-ls images | sed 's/.jpg//' > annotations/trainval.txt
 
-cp $DIR/src/utils/create_tf_record.py research/object_detection/dataset_tools/
+print_step "Generating trainval.txt"
+ls $MODELS_DIR/images | sed 's/.jpg//' > $MODELS_DIR/annotations/trainval.txt
 
-python research/object_detection/dataset_tools/create_tf_record.py \
-  --data_dir=. \
-  --output_dir=. \
-  --label_map_path=annotations/label_map.pbtxt \
+
+update_python_path
+
+
+print_step "Copying and running create_tf_record script"
+cp $DIR/src/utils/create_tf_record.py $RESEARCH_DIR/object_detection/dataset_tools/
+python $RESEARCH_DIR/object_detection/dataset_tools/create_tf_record.py \
+  --data_dir=$MODELS_DIR \
+  --output_dir=$MODELS_DIR \
+  --label_map_path=$MODELS_DIR/annotations/label_map.pbtxt \
   --num_shards=1
 
-mv train.record-00000-of-00001 tf_record/train.record
-mv val.record-00000-of-00001 tf_record/val.record
+print_step "Renaming train and val tf records"
+mv $MODELS_DIR/train.record-00000-of-00001 $MODELS_DIR/tf_record/train.record
+mv $MODELS_DIR/val.record-00000-of-00001 $MODELS_DIR/tf_record/val.record
 
-if [ ! -e ssd_mobilenet_v2_coco_2018_03_29 ]; then
+if [ ! -e $MODELS_DIR/ssd_mobilenet_v2_coco_2018_03_29 ]; then
+  print_step "Downloading ssd_mobilenet_v2_coco_2018_03_29"
+  cd $MODELS_DIR
   curl -O http://download.tensorflow.org/models/object_detection/ssd_mobilenet_v2_coco_2018_03_29.tar.gz
   tar xf ssd_mobilenet_v2_coco_2018_03_29.tar.gz
+  cd $DIR
 fi
 
-cp ssd_mobilenet_v2_coco_2018_03_29/model.* checkpoints/
+print_step "Copying ssd_mobilenet_v2_coco_2018_03_29 checkpoints"
+cp $MODELS_DIR/ssd_mobilenet_v2_coco_2018_03_29/model.* $MODELS_DIR/checkpoints/
 
-cp $DIR/src/ssd_mobilenet_v2_coco.config .
+print_step "Copying custom ssd_mobilenet_v2_coco config to models dir"
+cp $DIR/src/ssd_mobilenet_v2_coco.config $MODELS_DIR
 
-echo 'Run train.sh, eval.sh and tensorboard.sh in separate terminals'
+print_step "Done!"
+print_step "Run ./train.sh to start training the model"
+print_step "Run ./eval.sh to start evaluating the model"
+print_step "Run ./tensorboard.sh to check the training and eval"

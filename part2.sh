@@ -1,26 +1,30 @@
 #!/bin/bash
 
-DIR=`pwd`
-DATA_DIR=$DIR/data
-DATA_MODEL_DIR=$DATA_DIR/model
-MODELS_DIR="venv/lib/python3.7/site-packages/tensorflow/models"
-cd $MODELS_DIR/research
+set -e
 
-export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
+source utils.sh
 
-cd ../ && rm -rf fine_tuned_model && cd research
+rm -rf $MODELS_DIR/fine_tuned_model
 
-python object_detection/export_inference_graph.py \
+update_python_path
+
+print_step "Generating inference graph"
+python $RESEARCH_DIR/object_detection/export_inference_graph.py \
   --input_type image_tensor \
-  --pipeline_config_path ../ssd_mobilenet_v2_coco.config \
-  --trained_checkpoint_prefix ../train/model.ckpt-1600 \
-  --output_directory ../fine_tuned_model
+  --pipeline_config_path $MODELS_DIR/ssd_mobilenet_v2_coco.config \
+  --trained_checkpoint_prefix $MODELS_DIR/train/model.ckpt-1600 \
+  --output_directory $MODELS_DIR/fine_tuned_model
 
-cp -r ../fine_tuned_model/* $DIR/data/model
+print_step "Copying fine tuned model to project dir"
+cp -r $MODELS_DIR/fine_tuned_model/* $DATA_MODEL_DIR
 
+print_step "Generating graph for use by opencv"
 python $DIR/src/tf_text_graph_ssd.py \
   --input=$DATA_MODEL_DIR/frozen_inference_graph.pb \
   --output=$DATA_MODEL_DIR/graph.pbtxt \
   --config=$DIR/src/ssd_mobilenet_v2_coco.config
 
 sed -i s/AddV2/Add/g $DATA_MODEL_DIR/graph.pbtxt
+
+print_step "Done!"
+print_step "Run python src/run.py"

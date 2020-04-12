@@ -1,8 +1,8 @@
 #!/bin/bash
 
-print_step() {
-  printf "\n\n>>> $1\n\n"
-}
+set -e
+
+source utils.sh
 
 if [ "$1" == "--hard" ]; then
   print_step "Removing venv folder"
@@ -18,16 +18,20 @@ fi
 print_step "Installing python packages"
 source venv/bin/activate && pip install -U pip && pip install -U -r requirements.txt
 
-print_step "Cloning tensorflow models repo"
-MODELS_DIR="venv/lib/python3.7/site-packages/tensorflow/models"
 if [ ! -e $MODELS_DIR ]; then
+  print_step "Cloning tensorflow models repo"
   git clone https://github.com/tensorflow/models.git $MODELS_DIR
 fi
 
+update_python_path
+
 print_step "Compiling protobuf"
-cd $MODELS_DIR/research
+cd $RESEARCH_DIR
 protoc object_detection/protos/*.proto --python_out=.
-export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
+
+print_step "Testing tensorflow installation"
 python object_detection/builders/model_builder_test.py
 
-print_step "Done"
+cd $DIR
+
+print_step "Run ./part1.sh"
