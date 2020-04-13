@@ -30,7 +30,6 @@ class BaseReader(object):
             ret, frame = self.cap.read()
             if not ret:
                 break
-            self.handle_frame(frame)
-            if cv.waitKey(1) == 27:
+            if self.handle_frame(frame) is False or cv.waitKey(1) == 27:
                 break
         self.close()
