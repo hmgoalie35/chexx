@@ -1,0 +1,14 @@
+<annotation>
+	<folder>img</folder>
+	<filename>puck386.jpg</filename>
+	<path>/home/harris/Development/git/chexx/data/img/puck386.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>3840</width>
+		<height>2160</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+</annotation>
