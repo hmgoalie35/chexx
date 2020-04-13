@@ -65,3 +65,4 @@ class ChexxTracker(BaseReader):
         winname = 'chexx'
         cv.namedWindow(winname, cv.WINDOW_NORMAL)
         cv.imshow(winname, frame)
+# up to 619
