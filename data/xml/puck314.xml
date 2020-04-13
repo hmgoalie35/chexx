@@ -1,0 +1,26 @@
+<annotation>
+	<folder>img</folder>
+	<filename>puck314.jpg</filename>
+	<path>/Users/mpittinsky/chexx/data/img/puck314.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>3840</width>
+		<height>2160</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>puck</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>2005</xmin>
+			<ymin>977</ymin>
+			<xmax>2053</xmax>
+			<ymax>1005</ymax>
+		</bndbox>
+	</object>
+</annotation>
