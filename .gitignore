@@ -132,7 +132,7 @@ dmypy.json
 # IDEs
 .idea/
 
-media/video/*
-!media/video/.gitkeep
-media/img/training/source/*
-!media/img/training/source/.gitkeep
+media/videos/*
+!media/videos/.gitkeep
+data/img/*
+!data/img/.gitkeep
