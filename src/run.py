@@ -1,17 +1,16 @@
-from conf import VIDEO_DIR
-from trackers.chexx import ChexxTracker
-from trackers.eye import EyeTracker
-from trackers.puck import PuckTracker
+from conf import DATA_IMG_DIR, DATA_XML_DIR, VIDEOS_DIR
+from utils.video2img import Video2Img
+from utils.xml import strip_absolute_path
 
 
 if __name__ == '__main__':
-    chexx_vid = VIDEO_DIR / 'chexx_top_and_side_views.mp4'
+    v2i = Video2Img(
+        input_file=str(VIDEOS_DIR / 'chexx_player_view.mp4'),
+        label='puck',
+        output_dir=DATA_IMG_DIR,
+        max_images=500,
+        frequency=60,
+        offset=0
+    )
 
-    pt = PuckTracker(input_file=chexx_vid)
-    # pt.run()
-
-    et = EyeTracker(input_file=VIDEO_DIR / 'eye.mp4')
-    # et.run()
-
-    t = ChexxTracker(input_file=chexx_vid)
-    t.run()
+    strip_absolute_path(input_dir=DATA_XML_DIR)
