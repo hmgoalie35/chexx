@@ -131,6 +131,7 @@ dmypy.json
 
 # IDEs
 .idea/
+.vscode
 
 media/videos/*
 !media/videos/.gitkeep
