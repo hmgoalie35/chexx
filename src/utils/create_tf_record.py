@@ -219,6 +219,7 @@ def create_tf_record(output_filename,
                      annotations_dir,
                      image_dir,
                      examples,
+                     total_examples,
                      faces_only=True,
                      mask_type='png'):
   """Creates a TFRecord file from examples.
@@ -237,11 +238,9 @@ def create_tf_record(output_filename,
   """
   with contextlib2.ExitStack() as tf_record_close_stack:
     success = 0
-    total = 0
     output_tfrecords = tf_record_creation_util.open_sharded_output_tfrecords(
         tf_record_close_stack, output_filename, num_shards)
     for idx, example in enumerate(examples):
-      total += 1
       if idx % 100 == 0:
         logging.info('On image %d of %d', idx, len(examples))
       xml_path = os.path.join(annotations_dir, 'xmls', example + '.xml')
@@ -269,7 +268,7 @@ def create_tf_record(output_filename,
           success += 1
       except ValueError as e:
         logging.warning('Invalid example: %s %s, ignoring.', xml_path, e)
-    print(f'Successful {Path(output_filename).name}: {success}/{total}')
+    print(f'Successful {Path(output_filename).name}: {success}/{total_examples}')
 
 # TODO(derekjchow): Add test for pet/PASCAL main files.
 def main(_):
@@ -307,6 +306,7 @@ def main(_):
       annotations_dir,
       image_dir,
       train_examples,
+      total_examples=num_examples,
       faces_only=FLAGS.faces_only,
       mask_type=FLAGS.mask_type)
   create_tf_record(
@@ -316,6 +316,7 @@ def main(_):
       annotations_dir,
       image_dir,
       val_examples,
+      total_examples=num_examples,
       faces_only=FLAGS.faces_only,
       mask_type=FLAGS.mask_type)
 

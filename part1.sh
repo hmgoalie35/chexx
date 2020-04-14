@@ -6,7 +6,6 @@ source utils.sh
 
 print_step "Creating custom directories"
 mkdir -p $MODELS_DIR/annotations/xmls
-mkdir -p $MODELS_DIR/annotations/trimaps  # TODO Remove?
 mkdir -p $MODELS_DIR/images
 mkdir -p $MODELS_DIR/checkpoints
 mkdir -p $MODELS_DIR/tf_record

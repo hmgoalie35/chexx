@@ -13,12 +13,15 @@ CV applied to chexx (bubble hockey)
 * Run `labelImg`
   * Set the default label to make your life easier
   * Load the output dir specified when using `Video2Img`
+  * Make sure to set the output dir for labelImg to data/xml
+* Use `utils.xml.strip_absolute_path` to remove the absolute image paths from the generated xml files
+    * Import into `src/run.py`
 
 # Training
 * Run `./part1.sh`
 * Run `./train.sh` in a separate terminal
     * This will take a while, close all non-essential programs
-    * You'll want to kill this script when the loss starts to taper off. The tensboard script below will display a nice graph for you
+    * You'll want to kill this script when the loss starts to taper off. The tensboard script below will start a webserver displaying a nice graph for you
 * Run `./eval.sh` in a separate terminal
     * This will test the model against test images and feeds the tensorboard script below
 * Run `./tensorboard.sh` in a separate terminal
