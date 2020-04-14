@@ -17,19 +17,3 @@ fi
 
 print_step "Installing python packages"
 source venv/bin/activate && pip install -U pip && pip install -U -r requirements.txt
-
-if [ ! -e $MODELS_DIR ]; then
-  print_step "Cloning tensorflow models repo"
-  git clone https://github.com/tensorflow/models.git $MODELS_DIR
-fi
-
-update_python_path
-
-print_step "Compiling protobuf"
-cd $RESEARCH_DIR
-protoc object_detection/protos/*.proto --python_out=.
-
-print_step "Testing tensorflow installation"
-python object_detection/builders/model_builder_test.py
-
-cd $DIR

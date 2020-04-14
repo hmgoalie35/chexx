@@ -1,5 +1,5 @@
 # chexx
-CV applied to chexx (bubble hockey)
+ML & CV applied to chexx (bubble hockey)
 
 
 # Installation
@@ -10,11 +10,11 @@ CV applied to chexx (bubble hockey)
 # Generate training and testing images
 * Use the `Video2Img` class to create images from a video
     * Modify `src/run.py`, then run `python src/run.py`
-* Run `labelImg`
+* Run `labelImg` and manually create bounding boxes
   * Set the default label to make your life easier
   * Load the output dir specified when using `Video2Img`
   * Make sure to set the output dir for labelImg to data/xml
-* Use `utils.xml.strip_absolute_path` to remove the absolute image paths from the generated xml files
+* After creating bounding boxes use `utils.xml.strip_absolute_path` to remove the absolute image paths from the xml files
     * Import into `src/run.py`
 
 # Training
@@ -29,7 +29,7 @@ CV applied to chexx (bubble hockey)
 
 # Generating the model
 * Run `./part2.sh`
-    * Depending on the last checkpoint, you will have to update `model.ckpt-<chkpt_number>` in the script.
+    * Depending on the last checkpoint, you will have to update `model.ckpt-<chkpt_number>` in the script
 
 # Applying the model to video
 * Use the `ChexxTracker` class. Modify as necessary `src/run.py`
