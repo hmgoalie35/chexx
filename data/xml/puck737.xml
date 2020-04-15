@@ -1,0 +1,26 @@
+<annotation>
+	<folder>img</folder>
+	<filename>puck737.jpg</filename>
+	<path>/home/harris/Development/git/chexx/data/img/puck737.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1920</width>
+		<height>1080</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>puck</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>974</xmin>
+			<ymin>524</ymin>
+			<xmax>1005</xmax>
+			<ymax>548</ymax>
+		</bndbox>
+	</object>
+</annotation>
