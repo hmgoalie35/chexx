@@ -1,0 +1,16 @@
+@import "common/variables";
+@import "common/fonts";
+@import "common/module";
+@import "common/layout";
+
+body
+{
+  box-sizing: border-box;
+}
+
+body,
+h2,
+h1
+{
+  margin: 0;
+}

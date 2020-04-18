@@ -1,0 +1,17 @@
+@mixin Navbar
+{
+  padding: 12px $horizontal-padding;
+  max-height: $navbar-height;
+  background-color: $main-gray;
+}
+
+.Navbar
+{
+  @include Navbar;
+
+  &-image
+  {
+    height: $navbar-height;
+  }
+}
+

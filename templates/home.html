@@ -1,0 +1,41 @@
+{% extends 'site_base.html' %}
+
+{% block title %}Chexx ML Dashboard{% endblock %}
+
+{% block body %}
+  <div class="l-container">
+    <div class="l-row">
+      {% call Card('Live Feed', 'stream') %}
+        <img class="Card-video" src="{{ url_for('stream') }}">
+      {% endcall %}
+    </div>
+    <div class="l-row">
+      {% call Card('Puck Speed', 'speed') %}
+        <div class="Card-puckDisplay">
+          <div class="Card-puckSpeed">
+            100
+          </div>
+        </div>
+      {% endcall %}
+      {% call Card('Model Statistics', 'model') %}
+        <div>Model Accuracy: 80%</div>
+        <div>Model Accuracy: 80%</div>
+        <div>Model Accuracy: 80%</div>
+        <div>Model Accuracy: 80%</div>
+        <div>Model Accuracy: 80%</div>
+        <div>Model Accuracy: 80%</div>
+      {% endcall %}
+    </div>
+  </div>
+{% endblock %}
+
+{% macro Card(title, modifier="") -%}
+  <div class="Card{% if modifier %} Card--{{ modifier }}{% endif %}">
+    <h2 class="Card-title">
+      {{ title }}
+    </h2>
+    <div class="Card-content">
+      {{ caller() }}
+    </div>
+  </div>
+{%- endmacro %}

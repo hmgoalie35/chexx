@@ -1,0 +1,15 @@
+.l-container
+{
+  padding: 0 $horizontal-padding;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: $container-width-desktop;
+}
+
+.l-row
+{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}

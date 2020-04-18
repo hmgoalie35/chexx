@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='build/css/main.css') }}">
+</head>
+<nav class="Navbar Text--navbar">
+  <div class="Navbar-item">
+      <img class="Navbar-image" src="{{ url_for('static', filename='img/chexx_logo.png') }}" alt="ChexxML">
+  </div>
+</nav>
+<body class="Text">
+  {% block body %}
+  {% endblock %}
+</body>
+</html>

@@ -1,0 +1,21 @@
+@mixin Text--base($font-size: 16px, $font-weight: $font-weight-normal)
+{
+  font-family: $font-family-main;
+  font-size: $font-size;
+  font-weight: $font-weight-normal;
+}
+
+@mixin Text--navbar
+{
+  @include Text--base(24px, $font-weight-bold);
+}
+
+.Text
+{
+  @include Text--base;
+
+  &--navbar
+  {
+    @include Text--navbar;
+  }
+}
