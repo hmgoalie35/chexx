@@ -1,7 +1,8 @@
-from flask import current_app
 from math import floor
 
 import cv2 as cv
+from flask import current_app
+
 
 GREEN = (0, 255, 0)
 BLACK = (0, 0, 0)
