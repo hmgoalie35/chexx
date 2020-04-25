@@ -14,11 +14,11 @@ class ChexxTracker:
             str(current_app.config['DATA_MODEL_DIR'] / 'frozen_inference_graph.pb'),
             str(current_app.config['DATA_MODEL_DIR'] / 'graph.pbtxt')
         )
-        self.threshold = 0.3
+        self.threshold = 0.8
 
     def handle_frame(self, frame):
         rows, cols, channels = frame.shape
-        self.net.setInput(cv.dnn.blobFromImage(frame, size=(300, 300), swapRB=True, crop=False))
+        self.net.setInput(cv.dnn.blobFromImage(frame, size=(150, 150), swapRB=True, crop=False))
         net_output = self.net.forward()
 
         for detection in net_output[0, 0]:

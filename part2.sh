@@ -12,7 +12,7 @@ print_step "Generating inference graph"
 python $RESEARCH_DIR/object_detection/export_inference_graph.py \
   --input_type image_tensor \
   --pipeline_config_path $MODELS_DIR/ssd_mobilenet_v2_coco.config \
-  --trained_checkpoint_prefix $MODELS_DIR/train/model.ckpt-370 \
+  --trained_checkpoint_prefix $MODELS_DIR/train/model.ckpt-167 \
   --output_directory $MODELS_DIR/fine_tuned_model
 
 print_step "Copying fine tuned model to project dir"
