@@ -16,8 +16,13 @@ if [ ! -e venv ]; then
   python3.7 -m venv venv/
 fi
 
+REQUIREMENTS_FILE="requirements.dev.txt"
+if [ "$(uname -n)" == "raspberrypi" ]; then
+  REQUIREMENTS_FILE="requirements.base.txt"
+fi
+
 print_step "Installing python packages"
-source venv/bin/activate && pip install -U pip && pip install -U -r requirements.txt
+source venv/bin/activate && pip install -U pip && pip install -U -r $REQUIREMENTS_FILE
 
 print_step "Installing node"
 bash -ic "nvm install"
