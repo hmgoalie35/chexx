@@ -14,7 +14,7 @@ class ChexxTracker:
             str(current_app.config['DATA_MODEL_DIR'] / 'frozen_inference_graph.pb'),
             str(current_app.config['DATA_MODEL_DIR'] / 'graph.pbtxt')
         )
-        self.threshold = 0.8
+        self.threshold = 0.4
 
     def handle_frame(self, frame):
         rows, cols, channels = frame.shape
