@@ -3,4 +3,4 @@
 set -e
 
 
-pkill gunicorn ; cd ~/chexx && git pull && ./runprod.sh
+cd ~/chexx && git pull && ./runprod.sh
