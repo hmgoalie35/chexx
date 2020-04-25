@@ -1,0 +1,4 @@
+-r requirements.base.txt
+
+matplotlib==3.2.*
+opencv-python==4.2.*
