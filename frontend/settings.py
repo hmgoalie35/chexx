@@ -14,8 +14,14 @@ TEMPLATE_FOLDER = str(BASE_DIR / 'templates')
 # Obj detection
 OBJ_DETECT_METHOD = os.environ.get('OBJ_DETECT_METHOD')
 OBJ_DETECT_DIR = BASE_DIR / f'{OBJ_DETECT_METHOD}_objdetect'
-DATA_DIR = OBJ_DETECT_DIR / 'data'
-DATA_IMG_DIR = DATA_DIR / 'img'
-DATA_XML_DIR = DATA_DIR / 'xml'
-DATA_CSV_DIR = DATA_DIR / 'csv'
-DATA_MODEL_DIR = DATA_DIR / 'model'
+
+# Tensorflow
+TF_DATA_DIR = OBJ_DETECT_DIR / 'data'
+TF_DATA_MODEL_DIR = TF_DATA_DIR / 'model'
+TF_FROZEN_INF_GRAPH_FILE = TF_DATA_MODEL_DIR / 'frozen_inference_graph.pb'
+TF_GRAPH_FILE = TF_DATA_MODEL_DIR / 'graph.pbtxt'
+
+# OpenCV
+OPENCV_SAMPLES_DIR = OBJ_DETECT_DIR / 'samples'
+OPENCV_DATA_DIR = OPENCV_SAMPLES_DIR / 'data'
+OPENCV_CASCADE_FILE = OPENCV_DATA_DIR / 'cascade.xml'

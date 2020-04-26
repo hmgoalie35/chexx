@@ -16,8 +16,8 @@ class BaseTracker(object):
 class TensorflowPuckTracker(BaseTracker):
     def __init__(self, *args, **kwargs):
         self.net = cv.dnn.readNetFromTensorflow(
-            str(current_app.config['DATA_MODEL_DIR'] / 'frozen_inference_graph.pb'),
-            str(current_app.config['DATA_MODEL_DIR'] / 'graph.pbtxt')
+            str(current_app.config['TF_FROZEN_INF_GRAPH_FILE']),
+            str(current_app.config['TF_GRAPH_FILE'])
         )
         self.threshold = 0.3
 
@@ -73,7 +73,26 @@ class OpenCVPuckTracker(BaseTracker):
         cascade_file = current_app.config['OPENCV_CASCADE_FILE']
         self.cascade = cv.CascadeClassifier(cascade_file)
         if self.cascade.empty():
+            self.cascade = None
             print(f'Failed to load cascade file {cascade_file}')
 
     def handle_frame(self, frame):
+        if self.cascade is None:
+            return frame
+
+        pucks = self.cascade.detectMultiScale(frame)
+        print(f'Detected {len(pucks)} pucks')
+        for x, y, w, h in pucks:
+            center = (x + w // 2, y + h // 2)
+            frame = cv.ellipse(frame, center, (w // 2, h // 2), 0, 0, 360, GREEN, 4)
+            cv.putText(
+                img=frame,
+                text='puck',
+                org=(x, y),
+                fontFace=cv.FONT_HERSHEY_COMPLEX_SMALL,
+                color=BLACK,
+                fontScale=.9,
+                lineType=1,
+                thickness=1
+            )
         return frame

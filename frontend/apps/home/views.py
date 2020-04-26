@@ -1,7 +1,7 @@
 import cv2
 from flask import Response, current_app, render_template, views
 
-from .helpers import ChexxTracker
+from .trackers import OpenCVPuckTracker, TensorflowPuckTracker
 
 
 class HomeView(views.MethodView):
@@ -12,7 +12,10 @@ class HomeView(views.MethodView):
 class StreamView(views.MethodView):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.tracker = ChexxTracker()
+        if current_app.config['OBJ_DETECT_METHOD'] == 'opencv':
+            self.tracker = OpenCVPuckTracker()
+        else:
+            self.tracker = TensorflowPuckTracker()
 
     def get_frame(self, camera):
         while True:
@@ -24,10 +27,8 @@ class StreamView(views.MethodView):
             )
 
     def get(self, *args, **kwargs):
-        if current_app.camera:
-            return Response(
-                self.get_frame(current_app.camera),
-                mimetype='multipart/x-mixed-replace; boundary=frame'
-            )
+        camera = current_app.camera
+        if camera:
+            return Response(self.get_frame(camera), mimetype='multipart/x-mixed-replace; boundary=frame')
         else:
             return Response()
