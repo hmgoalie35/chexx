@@ -14,8 +14,9 @@ BG_FILE=$SAMPLES_DIR/bg.txt
 
 DATA_DIR=$SAMPLES_DIR/data
 
-WIDTH=15
-HEIGHT=13
+TRAIN_WIDTH=20
+TRAIN_HEIGHT=20
+
 
 print_step() {
   printf "\n\n>>> $1\n\n"

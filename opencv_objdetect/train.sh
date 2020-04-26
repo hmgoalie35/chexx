@@ -15,5 +15,5 @@ opencv_traincascade \
   -numPos 900 \
   -numNeg 450 \
   -numStages 15 \
-  -w $WIDTH \
-  -h $HEIGHT
+  -w $TRAIN_WIDTH \
+  -h $TRAIN_HEIGHT
