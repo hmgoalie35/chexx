@@ -12,6 +12,7 @@ opencv_traincascade \
   -data $(basename $DATA_DIR) \
   -vec $VEC_FILE \
   -bg $(basename $BG_FILE) \
-  -numPos 1003 \
-  -numNeg 1000 \
-  -numStages 5
+  -numPos 59 \
+  -numNeg 25 \
+  -numStages 5 \
+  -minHitRate 0.998
