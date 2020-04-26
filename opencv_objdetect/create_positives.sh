@@ -18,4 +18,5 @@ elif [ "$1" == "manual" ]; then
 fi
 
 print_step "Generating positives vector file for training"
-opencv_createsamples -info $INFO_FILE -num 1000 -vec $VEC_FILE -w $TRAIN_WIDTH -h $TRAIN_HEIGHT
+NUM=$(cat $INFO_FILE | wc -l)
+opencv_createsamples -info $INFO_FILE -num $NUM -vec $VEC_FILE
