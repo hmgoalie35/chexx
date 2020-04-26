@@ -14,4 +14,4 @@ opencv_traincascade \
   -bg $(basename $BG_FILE) \
   -numPos 59 \
   -numNeg 10 \
-  -numStages 15
+  -numStages 5
