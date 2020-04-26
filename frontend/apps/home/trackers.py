@@ -71,7 +71,7 @@ class OpenCVPuckTracker(BaseTracker):
     def __init__(self):
         super().__init__()
         cascade_file = current_app.config['OPENCV_CASCADE_FILE']
-        self.cascade = cv.CascadeClassifier(cascade_file)
+        self.cascade = cv.CascadeClassifier(str(cascade_file))
         if self.cascade.empty():
             self.cascade = None
             print(f'Failed to load cascade file {cascade_file}')
