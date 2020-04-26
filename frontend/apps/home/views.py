@@ -1,7 +1,7 @@
 import cv2
 from flask import Response, current_app, render_template, views
 
-from helpers import ChexxTracker
+from .helpers import ChexxTracker
 
 
 class HomeView(views.MethodView):

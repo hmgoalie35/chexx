@@ -1,6 +1,6 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
-export FLASK_APP=app.py
-export FLASK_DEBUG=1
-source venv/bin/activate
-flask run
+export FLASK_APP=frontend/wsgi
+export FLASK_ENV=development
+export OBJ_DETECT_METHOD='opencv'
+source venv/bin/activate && flask run

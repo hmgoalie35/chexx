@@ -27,5 +27,5 @@ source venv/bin/activate && pip install -U pip && pip install -U -r $REQUIREMENT
 print_step "Installing node"
 bash -ic "nvm install"
 
-print_step "Install npm packages"
+print_step "Installing npm packages"
 npm install

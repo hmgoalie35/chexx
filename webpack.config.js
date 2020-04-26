@@ -5,7 +5,8 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 // Paths
 const projectDir = path.resolve(__dirname);
-const staticDir = path.join(projectDir, 'static');
+const frontendDir = path.join(projectDir, 'frontend');
+const staticDir = path.join(frontendDir, 'static');
 const jsDir = path.join(staticDir, 'js');
 const scssDir = path.join(staticDir, 'scss');
 const fontsDir = path.join(staticDir, 'fonts');

@@ -137,5 +137,5 @@ dmypy.json
 
 media/videos/*
 !media/videos/.gitkeep
-data/img/*
-!data/img/.gitkeep
+tensorflow_objdetect/data/img/*
+!tensorflow_objdetect/data/img/.gitkeep
