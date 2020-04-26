@@ -86,17 +86,5 @@ class OpenCVPuckTracker(BaseTracker):
         for x, y, w, h in pucks:
             center = (x + w // 2, y + h // 2)
             radius = int(round((w + h) * 0.25))
-            frame = cv.circle(frame, center, radius, GREEN, 2)
-            # frame = cv.ellipse(frame, center, (w // 2, h // 2), 0, 0, 360, GREEN, 4)
-            # frame = cv.rectangle(frame, (x, y), (x + w, y + h), GREEN, 1)
-            # cv.putText(
-            #     img=frame,
-            #     text='puck',
-            #     org=(x, y),
-            #     fontFace=cv.FONT_HERSHEY_COMPLEX_SMALL,
-            #     color=BLACK,
-            #     fontScale=.9,
-            #     lineType=1,
-            #     thickness=1
-            # )
+            cv.circle(frame, center, radius, GREEN, 2)
         return frame

@@ -14,5 +14,5 @@ opencv_traincascade \
   -bg $(basename $BG_FILE) \
   -numPos 59 \
   -numNeg 25 \
-  -numStages 5 \
+  -numStages 29 \
   -maxFalseAlarmRate 0.3
