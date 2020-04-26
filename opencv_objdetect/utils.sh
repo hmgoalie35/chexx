@@ -2,7 +2,8 @@
 
 set -e
 
-SAMPLES_DIR=samples
+DIR=$(pwd)
+SAMPLES_DIR=$DIR/samples
 
 POSITIVES_DIR=$SAMPLES_DIR/positives
 INFO_FILE=$POSITIVES_DIR/info.txt
