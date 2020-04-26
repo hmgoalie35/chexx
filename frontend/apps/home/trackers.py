@@ -8,7 +8,12 @@ GREEN = (0, 255, 0)
 BLACK = (0, 0, 0)
 
 
-class ChexxTracker:
+class BaseTracker(object):
+    def handle_frame(self, frame):
+        raise NotImplementedError()
+
+
+class TensorflowPuckTracker(BaseTracker):
     def __init__(self, *args, **kwargs):
         self.net = cv.dnn.readNetFromTensorflow(
             str(current_app.config['DATA_MODEL_DIR'] / 'frozen_inference_graph.pb'),
@@ -59,4 +64,16 @@ class ChexxTracker:
                 thickness=1
             )
 
+        return frame
+
+
+class OpenCVPuckTracker(BaseTracker):
+    def __init__(self):
+        super().__init__()
+        cascade_file = current_app.config['OPENCV_CASCADE_FILE']
+        self.cascade = cv.CascadeClassifier(cascade_file)
+        if self.cascade.empty():
+            print(f'Failed to load cascade file {cascade_file}')
+
+    def handle_frame(self, frame):
         return frame

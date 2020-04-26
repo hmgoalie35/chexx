@@ -8,10 +8,11 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('input_src')
     parser.add_argument('label')
-    parser.add_argument('output_dir')
-    parser.add_argument('max_images')
-    parser.add_argument('frequency')
-    parser.add_argument('offset')
+    parser.add_argument('output_dir', type=Path)
+    parser.add_argument('max_images', type=int)
+    parser.add_argument('frequency', type=int)
+    parser.add_argument('offset', type=int)
+
     args = parser.parse_args()
 
     input_src = args.input_src
@@ -23,10 +24,10 @@ def main():
     Video2Img(
         input_file=input_src,
         label=args.label,
-        output_dir=Path(args.output_dir),
-        max_images=int(args.max_images),
-        frequency=int(args.frequency),
-        offset=int(args.offset)
+        output_dir=args.output_dir,
+        max_images=args.max_images,
+        frequency=args.frequency,
+        offset=args.offset
     ).run()
 
 
