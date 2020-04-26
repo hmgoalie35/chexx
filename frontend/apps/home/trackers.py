@@ -80,8 +80,7 @@ class OpenCVPuckTracker(BaseTracker):
         if self.cascade is None:
             return frame
 
-        pucks = self.cascade.detectMultiScale(frame)
-        print(f'Detected {len(pucks)} pucks')
+        pucks = self.cascade.detectMultiScale(frame, 15, 15)
         for x, y, w, h in pucks:
             center = (x + w // 2, y + h // 2)
             radius = int(round((w + h) * 0.25))
@@ -91,7 +90,7 @@ class OpenCVPuckTracker(BaseTracker):
             cv.putText(
                 img=frame,
                 text='puck',
-                org=(x - h, y),
+                org=(x - w, y - h),
                 fontFace=cv.FONT_HERSHEY_COMPLEX_SMALL,
                 color=BLACK,
                 fontScale=.9,
