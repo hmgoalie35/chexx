@@ -84,11 +84,14 @@ class OpenCVPuckTracker(BaseTracker):
         print(f'Detected {len(pucks)} pucks')
         for x, y, w, h in pucks:
             center = (x + w // 2, y + h // 2)
-            frame = cv.ellipse(frame, center, (w // 2, h // 2), 0, 0, 360, GREEN, 4)
+            radius = int(round((w + h) * 0.25))
+            frame = cv.circle(frame, center, radius, GREEN, 4)
+            # frame = cv.ellipse(frame, center, (w // 2, h // 2), 0, 0, 360, GREEN, 4)
+            # frame = cv.rectangle(frame, (x, y), (x + w, y + h), GREEN, 1)
             cv.putText(
                 img=frame,
                 text='puck',
-                org=(x, y),
+                org=(x - h, y),
                 fontFace=cv.FONT_HERSHEY_COMPLEX_SMALL,
                 color=BLACK,
                 fontScale=.9,
