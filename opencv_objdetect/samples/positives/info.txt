@@ -1,283 +1,59 @@
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck0.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck1.jpg 1 317 208 13 9
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck10.jpg 1 146 213 12 11
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck100.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck101.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck102.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck103.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck104.jpg 2 0 0 0 0 305 105 11 8
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck105.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck106.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck107.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck108.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck109.jpg 1 412 111 11 10
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck11.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck110.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck111.jpg 1 101 180 13 9
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck112.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck113.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck114.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck115.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck116.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck117.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck118.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck119.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck12.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck120.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck121.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck122.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck123.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck124.jpg 1 120 250 14 12
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck125.jpg 1 505 212 16 13
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck126.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck127.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck128.jpg 1 503 148 14 10
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck129.jpg 1 405 190 14 11
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck13.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck130.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck131.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck132.jpg 1 482 201 16 13
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck133.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck134.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck135.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck136.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck137.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck138.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck139.jpg 1 100 411 19 14
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck14.jpg 1 41 317 18 17
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck140.jpg 1 151 274 15 15
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck141.jpg 1 257 269 15 16
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck142.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck143.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck144.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck145.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck146.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck147.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck148.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck149.jpg 1 430 198 15 13
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck15.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck150.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck151.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck152.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck153.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck154.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck155.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck156.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck157.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck158.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck159.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck16.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck160.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck161.jpg 1 416 206 16 12
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck162.jpg 1 499 101 16 11
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck163.jpg 1 575 140 17 12
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck164.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck165.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck166.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck167.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck168.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck169.jpg 1 125 297 19 15
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck17.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck170.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck171.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck172.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck173.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck174.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck175.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck176.jpg 1 138 165 12 9
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck177.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck178.jpg 1 500 99 15 10
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck179.jpg 1 492 161 15 11
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck18.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck180.jpg 1 480 165 16 11
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck181.jpg 1 354 173 15 11
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck182.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck183.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck184.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck185.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck186.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck187.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck188.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck189.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck19.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck190.jpg 1 142 185 13 9
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck191.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck192.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck193.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck194.jpg 1 110 374 17 14
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck195.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck196.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck197.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck198.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck199.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck2.jpg 1 587 341 22 19
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck20.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck200.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck201.jpg 1 372 185 13 11
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck202.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck203.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck204.jpg 1 352 291 17 17
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck205.jpg 1 113 405 19 16
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck206.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck207.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck208.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck209.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck21.jpg 1 518 354 22 20
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck210.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck211.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck212.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck213.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck214.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck215.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck216.jpg 1 296 260 16 15
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck217.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck218.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck219.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck22.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck220.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck221.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck222.jpg 1 67 288 18 15
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck223.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck224.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck225.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck226.jpg 1 114 268 15 13
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck227.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck228.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck229.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck23.jpg 1 150 305 19 14
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck230.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck231.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck232.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck233.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck234.jpg 1 232 217 15 12
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck235.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck236.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck237.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck238.jpg 1 315 226 15 11
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck239.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck24.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck240.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck241.jpg 1 462 96 12 11
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck242.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck243.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck244.jpg 1 581 311 23 16
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck245.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck246.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck247.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck248.jpg 1 492 166 16 14
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck249.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck25.jpg 1 610 369 23 22
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck250.jpg 1 246 298 14 13
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck251.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck252.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck253.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck254.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck255.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck256.jpg 1 152 400 20 20
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck257.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck258.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck259.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck26.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck260.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck261.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck262.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck263.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck264.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck265.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck266.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck267.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck268.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck269.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck27.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck270.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck271.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck272.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck273.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck274.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck275.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck276.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck277.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck278.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck279.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck28.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck280.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck281.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck282.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck29.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck3.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck30.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck31.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck32.jpg 1 75 310 22 14
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck33.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck34.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck35.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck36.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck37.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck38.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck39.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck4.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck40.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck41.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck42.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck43.jpg 1 382 272 15 14
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck44.jpg 1 313 121 14 10
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck45.jpg 1 190 225 17 11
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck46.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck47.jpg 1 415 104 12 11
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck48.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck49.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck5.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck50.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck51.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck52.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck53.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck54.jpg 1 223 257 17 16
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck55.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck56.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck57.jpg 1 508 159 15 14
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck58.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck59.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck6.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck60.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck61.jpg 1 561 379 25 20
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck62.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck63.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck64.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck65.jpg 1 448 157 15 10
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck66.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck67.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck68.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck69.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck7.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck70.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck71.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck72.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck73.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck74.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck75.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck76.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck77.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck78.jpg 1 95 320 16 16
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck79.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck8.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck80.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck81.jpg 1 127 393 20 20
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck82.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck83.jpg 1 114 250 17 12
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck84.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck85.jpg 1 180 259 15 12
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck86.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck87.jpg 1 464 337 22 19
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck88.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck89.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck9.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck90.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck91.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck92.jpg 1 428 98 12 8
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck93.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck94.jpg 1 239 288 17 11
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck95.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck96.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck97.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck98.jpg 0
-/Users/mpittinsky/chexx/opencv_objdetect/samples/positives/puck99.jpg 0
+puck1.jpg 1 317 208 13 9
+puck10.jpg 1 146 213 12 11
+puck104.jpg 1 305 105 11 8
+puck109.jpg 1 412 111 11 10
+puck111.jpg 1 101 180 13 9
+puck124.jpg 1 120 250 14 12
+puck125.jpg 1 505 212 16 13
+puck128.jpg 1 503 148 14 10
+puck129.jpg 1 405 190 14 11
+puck132.jpg 1 482 201 16 13
+puck139.jpg 1 100 411 19 14
+puck14.jpg 1 41 317 18 17
+puck140.jpg 1 151 274 15 15
+puck141.jpg 1 257 269 15 16
+puck149.jpg 1 430 198 15 13
+puck161.jpg 1 416 206 16 12
+puck162.jpg 1 499 101 16 11
+puck163.jpg 1 575 140 17 12
+puck169.jpg 1 125 297 19 15
+puck176.jpg 1 138 165 12 9
+puck178.jpg 1 500 99 15 10
+puck179.jpg 1 492 161 15 11
+puck180.jpg 1 480 165 16 11
+puck181.jpg 1 354 173 15 11
+puck190.jpg 1 142 185 13 9
+puck194.jpg 1 110 374 17 14
+puck2.jpg 1 587 341 22 19
+puck201.jpg 1 372 185 13 11
+puck204.jpg 1 352 291 17 17
+puck205.jpg 1 113 405 19 16
+puck21.jpg 1 518 354 22 20
+puck216.jpg 1 296 260 16 15
+puck222.jpg 1 67 288 18 15
+puck226.jpg 1 114 268 15 13
+puck23.jpg 1 150 305 19 14
+puck234.jpg 1 232 217 15 12
+puck238.jpg 1 315 226 15 11
+puck241.jpg 1 462 96 12 11
+puck244.jpg 1 581 311 23 16
+puck248.jpg 1 492 166 16 14
+puck25.jpg 1 610 369 23 22
+puck250.jpg 1 246 298 14 13
+puck256.jpg 1 152 400 20 20
+puck32.jpg 1 75 310 22 14
+puck43.jpg 1 382 272 15 14
+puck44.jpg 1 313 121 14 10
+puck45.jpg 1 190 225 17 11
+puck47.jpg 1 415 104 12 11
+puck54.jpg 1 223 257 17 16
+puck57.jpg 1 508 159 15 14
+puck61.jpg 1 561 379 25 20
+puck65.jpg 1 448 157 15 10
+puck78.jpg 1 95 320 16 16
+puck81.jpg 1 127 393 20 20
+puck83.jpg 1 114 250 17 12
+puck85.jpg 1 180 259 15 12
+puck87.jpg 1 464 337 22 19
+puck92.jpg 1 428 98 12 8
+puck94.jpg 1 239 288 17 11
