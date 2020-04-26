@@ -1,6 +1,6 @@
 import cv2 as cv
 
-from readers.base import BaseReader
+from common_objdetect.readers.base import BaseReader
 
 
 class Video2Img(BaseReader):
