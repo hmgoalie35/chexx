@@ -15,4 +15,4 @@ opencv_traincascade \
   -numPos 59 \
   -numNeg 25 \
   -numStages 5 \
-  -minHitRate 0.998
+  -maxFalseAlarmRate 0.3

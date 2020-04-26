@@ -82,7 +82,7 @@ class OpenCVPuckTracker(BaseTracker):
 
         gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
 
-        pucks = self.cascade.detectMultiScale(gray, 10, 10)
+        pucks = self.cascade.detectMultiScale(gray, 20, 20)
         for x, y, w, h in pucks:
             center = (x + w // 2, y + h // 2)
             radius = int(round((w + h) * 0.25))
